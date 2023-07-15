@@ -1,0 +1,16 @@
+{
+    "name": "whitehat/cms",
+    "autoload": {
+        "psr-4": {
+            "Whitehat\\Cms\\": "src/",
+            "Engine\\": "engine/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Firdovsi Mamedov",
+            "email": "firdovsi.mamedov.k@gmail.com"
+        }
+    ],
+    "require": {}
+}
