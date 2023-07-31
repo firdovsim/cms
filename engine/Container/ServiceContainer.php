@@ -2,6 +2,8 @@
 
 namespace Engine\Container;
 
+use InvalidArgumentException;
+
 class ServiceContainer
 {
     private array $container = [];
@@ -18,7 +20,7 @@ class ServiceContainer
         if ($this->has($key)) {
             return $this->container[$key];
         }
-        return null;
+        throw new InvalidArgumentException("Service $key does not exist in Container");
     }
 
     public function has($key): bool

@@ -2,8 +2,8 @@
     "name": "whitehat/cms",
     "autoload": {
         "psr-4": {
-            "Whitehat\\Cms\\": "src/",
-            "Engine\\": "engine/"
+            "Engine\\": "engine/",
+            "App\\": "app/"
         }
     },
     "authors": [
@@ -12,5 +12,7 @@
             "email": "firdovsi.mamedov.k@gmail.com"
         }
     ],
-    "require": {}
+  "require": {
+        "ext-pdo": "*"
+  }
 }

@@ -7,8 +7,15 @@ use Engine\Container\ServiceContainer;
 
 try {
     $container = new ServiceContainer();
-    $kernel = new Kernel($container);
 
+    $services = require __DIR__ .'/Config/ServiceConfig.php';
+
+    foreach ($services as $service) {
+        $provider = new $service($container);
+        $provider->boot();
+    }
+
+    $kernel = new Kernel($container);
     $kernel->bootstrap();
 } catch (Exception $e) {
     echo $e->getMessage(), PHP_EOL;

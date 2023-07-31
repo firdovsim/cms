@@ -1,0 +1,1 @@
+<p>Header <?php echo $this->data['name'] ?></p>
